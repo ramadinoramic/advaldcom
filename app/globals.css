@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: #FAFAF7;
+  color: #0A0A0A;
+  font-feature-settings: 'ss01', 'cv11';
+}
+
+::selection {
+  background: #1F3A2E;
+  color: #FAFAF7;
+}
+
+/* Focus ring — visible but restrained */
+:focus-visible {
+  outline: 2px solid #1F3A2E;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Prose line length guard — used in long prose blocks */
+.prose-measure {
+  max-width: 68ch;
+}
+
+/* Reveal base state — IntersectionObserver toggles .is-visible */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
