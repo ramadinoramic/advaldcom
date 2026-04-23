@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: 'Advald',
     images: [
       {
-        url: '/og.png',
+        url: '/og.svg',
         width: 1200,
         height: 630,
         alt: 'Advald — Acquisition infrastructure for iGaming',
@@ -47,11 +47,12 @@ export const metadata: Metadata = {
     title: 'Advald — Acquisition infrastructure for iGaming',
     description:
       'Media, tracking, and AI automation operated as one system.',
-    images: ['/og.png'],
+    images: ['/og.svg'],
   },
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
   },
   robots: { index: true, follow: true },
 };

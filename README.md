@@ -40,9 +40,8 @@ components/
   sections/           Header, Hero, Thesis, Capabilities, Stack, WorkNote, About, Contact
   ui/                 Reveal, Eyebrow, Rule
 public/
-  og.png              1200x630 social card
-  favicon.ico
-  apple-touch-icon.png
+  og.svg              1200x630 social card
+  favicon.svg
 ```
 
 ## Notes
